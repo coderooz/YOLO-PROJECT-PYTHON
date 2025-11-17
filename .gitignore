@@ -1,0 +1,118 @@
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+*.egg-info/
+.installed.cfg
+*.egg
+pip-wheel-metadata/
+wheels/
+
+# Virtual environments
+env/
+venv/
+ENV/
+.venv/
+.venv-local/
+venv.bak/
+
+# Installer / pip logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage
+.pytest_cache/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*,cover
+
+# Type checkers / linters
+.mypy_cache/
+.dmypy.json
+.pyre/
+.pytype/
+.pylint.d/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+*.swp
+*~ 
+.project
+.settings/
+
+# Jupyter
+.ipynb_checkpoints
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite3
+*.db
+
+# Sensitive files / environment
+.env
+.env.*
+.env.local
+.secret
+credentials.json
+*.pem
+*.key
+
+# Build / docs
+docs/_build/
+build/
+dist/
+
+# PyInstaller
+*.manifest
+*.spec
+
+# Sphinx doctrees, caches
+.doctrees/
+*.doctree
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Machine learning / model artifacts (untracked large files)
+*.h5
+*.hdf5
+*.ckpt
+*.pt
+*.pth
+*.weights
+*.pb
+*.onnx
+models/
+checkpoints/
+runs/
+results/
+outputs/
+logs/
+
+# Misc
+*.bak
+*.temp
