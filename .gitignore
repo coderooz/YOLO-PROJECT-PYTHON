@@ -117,3 +117,4 @@ logs/
 # Misc
 *.bak
 *.temp
+test/
