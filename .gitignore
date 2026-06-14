@@ -50,6 +50,7 @@ coverage.xml
 .pyre/
 .pytype/
 .pylint.d/
+.ruff_cache/
 
 # IDEs and editors
 .vscode/

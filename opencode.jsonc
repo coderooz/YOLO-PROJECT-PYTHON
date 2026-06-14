@@ -1,0 +1,61 @@
+{
+  "$schema": "https://opencode.ai/config.json",
+  "model": "deepseek-v4-flash-free",
+
+  "instructions": [
+    "AGENTS.md"
+  ],
+
+  "references": {
+    "docs": {
+      "path": "C:\\Code_Works\\Docs",
+      "description": "Offline documentation for Python, OpenCV, YOLO, and all tech stacks"
+    }
+  },
+
+  "command": {
+    "check": {
+      "template": "Run full validation: python -m py_compile face-detection/face-reco.py && python -m py_compile object-detection/object_detect.py && python -m py_compile pose-estimation/pose-estimation.py && python -m py_compile object-counting/object_counter.py && python -m py_compile emotion-detection/emotion_detect.py",
+      "description": "Validate all Python files compile",
+      "agent": "build",
+      "subtask": false
+    },
+    "lint": {
+      "template": "Run ruff linter on all sub-projects: ruff check face-detection/ object-detection/ pose-estimation/ object-counting/ emotion-detection/ face-recognition/ crowd-counting/",
+      "description": "Lint all sub-projects",
+      "agent": "build",
+      "subtask": true
+    },
+    "test": {
+      "template": "Run face detection test: cd face-detection && python face-reco.py",
+      "description": "Run face detection",
+      "agent": "tester",
+      "subtask": true
+    },
+    "validate": {
+      "template": "Run full validation: ruff check **/*.py && python -m py_compile */*.py",
+      "description": "Full validation suite",
+      "agent": "build",
+      "subtask": false
+    },
+    "validate-docs": {
+      "template": "Validate project implementation against offline docs at C:\\Code_Works\\Docs\\ (python/, opencv/). Cross-reference YOLO usage patterns and report discrepancies.",
+      "description": "Validate against Python/OpenCV docs",
+      "agent": "doc-validator",
+      "subtask": true
+    }
+  },
+
+  "formatter": {
+    "ruff": {
+      "extensions": [".py"]
+    }
+  },
+
+  "lsp": {
+    "pyright": {
+      "command": ["pyright-langserver", "--stdio"],
+      "extensions": [".py"]
+    }
+  }
+}
