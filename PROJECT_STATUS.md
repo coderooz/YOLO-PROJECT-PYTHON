@@ -1,7 +1,7 @@
 # Project Status — YOLO Projects
 
 **Repository:** [coderooz/YOLO-PROJECT-PYTHON](https://github.com/coderooz/YOLO-PROJECT-PYTHON)
-**Last Updated:** 2026-06-14
+**Last Updated:** 2026-09-06
 **Overall Progress:** 42% (5/12 sub-projects implemented)
 
 ---
@@ -12,17 +12,17 @@
 
 | Sub-Project | File | Model | Last Verified |
 |-------------|------|-------|---------------|
-| Face Detection | `face-detection/face-reco.py` | `yolov8n-face.pt` | 2026-06-14 |
-| Object Detection | `object-detection/object_detect.py` | `yolov8n.pt` | 2026-06-14 |
-| Pose Estimation | `pose-estimation/pose-estimation.py` | `yolov8n-pose.pt` | 2026-06-14 |
-| Object Counting | `object-counting/object_counter.py` | `yolov8n.pt` + SORT | 2026-06-14 |
-| Emotion Detection | `emotion-detection/emotion_detect.py` | `yolov8n-face.pt` + FER | 2026-06-14 |
+| Face Detection | `face-detection/face-reco.py` | `yolov8n-face.pt` | 2026-09-06 |
+| Object Detection | `object-detection/object_detect.py` | `yolov8n.pt` | 2026-09-06 |
+| Pose Estimation | `pose-estimation/pose-estimation.py` | `yolov8n-pose.pt` | 2026-09-06 |
+| Object Counting | `object-counting/object_counter.py` | `yolov8n.pt` + SORT | 2026-09-06 |
+| Emotion Detection | `emotion-detection/emotion_detect.py` | `yolov8n-face.pt` + FER | 2026-09-06 |
 
 ### In Progress
 
 | Sub-Project | File | Status |
 |-------------|------|--------|
-| Face Recognition | `face-recognition/face-recognition.py` | Stub — basic structure exists |
+| Face Recognition | `face-recognition/simple_face_recognition.py` | Stub — basic detection only (no identity matching) |
 
 ### Planned
 
@@ -80,6 +80,28 @@
 ---
 
 ## Changelog
+
+### 2026-09-06
+- Created PRI (Project Reference Index)
+- Created `.workspace/` directory structure
+- Set up MCP project descriptor and project map
+- Fixed AGENTS.md model path typo (`.py` → `.pt`)
+- Fixed README backtick issues (4 backticks → 3)
+- Removed invalid LICENSE badge links from sub-project READMEs
+- Added `filterpy`, `scipy`, `insightface` to requirements.txt
+- Created AGENTS.md for 6 planned sub-projects
+- Created README placeholders for 6 planned sub-projects
+
+### 2026-09-09
+- **Preservation update:** Project prepared for long-term preservation
+- Created CHANGELOG.md
+- Created DEVELOPMENT.md (developer notes)
+- Fixed CONTRIBUTING.md model path typo (`.py` → `.pt`)
+- Made all documentation portable (removed Windows-specific paths)
+- Updated opencode.jsonc to use online docs references
+- Updated all sub-project AGENTS.md files with portable doc links
+- Verified GitHub repository contains all required artifacts
+- Committed and pushed all preservation changes
 
 ### 2026-06-14
 - Added OpenCode configuration (`opencode.jsonc`)

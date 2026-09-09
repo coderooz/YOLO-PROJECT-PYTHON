@@ -22,7 +22,7 @@ The script:
 ```bash
 cd face-detection
 python face-reco.py
-````
+```
 
 ---
 

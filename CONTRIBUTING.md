@@ -39,7 +39,7 @@ Thank you for your interest in contributing! This guide will help you get starte
 - **OpenCV** for webcam/display operations
 - **YOLOv8** via `ultralytics` for inference
 - Keep scripts self-contained and well-documented
-- Use relative model paths: `../models/<model>.py`
+- Use relative model paths: `../models/<model>.pt`
 - ESC key to exit, `q` as alternative
 
 ## Model Files

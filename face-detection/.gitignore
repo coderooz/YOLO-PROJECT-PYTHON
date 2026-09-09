@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+
+# Models (download locally)
+*.pt
+*.pth
+*.onnx
+models/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Ruff
+.ruff_cache/

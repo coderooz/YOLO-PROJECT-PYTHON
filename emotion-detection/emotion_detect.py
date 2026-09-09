@@ -2,6 +2,7 @@ import cv2
 from ultralytics import YOLO
 from fer.fer import FER
 import numpy as np
+import time
 
 # 1. Load YOLO face detector
 face_model = YOLO("../models/yolov8n-face.pt")
@@ -15,6 +16,8 @@ cap = cv2.VideoCapture(0)
 if not cap.isOpened():
     print("Error: Cannot access webcam")
     exit()
+
+prev_time = 0
 
 while True:
     ret, frame = cap.read()
@@ -52,6 +55,21 @@ while True:
             (255, 255, 255),
             2,
         )
+
+    # FPS calculation (time-based)
+    curr_time = time.time()
+    fps = int(1 / (curr_time - prev_time)) if prev_time != 0 else 0
+    prev_time = curr_time
+
+    cv2.putText(
+        annotated,
+        f"FPS: {fps}",
+        (20, 40),
+        cv2.FONT_HERSHEY_SIMPLEX,
+        1,
+        (0, 255, 0),
+        2,
+    )
 
     cv2.imshow("Emotion Detection", annotated)
 

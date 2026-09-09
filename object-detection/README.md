@@ -18,7 +18,7 @@ This project demonstrates **real-time object detection** using YOLOv8 with a liv
 ```bash
 cd object-detection
 python object_detect.py
-````
+```
 
 ---
 

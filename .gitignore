@@ -119,3 +119,10 @@ logs/
 *.bak
 *.temp
 test/
+
+# OpenCode workspace (development artifacts)
+.workspace/
+
+# MCP runtime state (local-only, contains PID/hostname)
+.mcp-runtime.json
+docs-repo.project-mcp.json

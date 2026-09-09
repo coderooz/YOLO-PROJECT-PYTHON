@@ -8,20 +8,20 @@
 
   "references": {
     "docs": {
-      "path": "C:\\Code_Works\\Docs",
-      "description": "Offline documentation for Python, OpenCV, YOLO, and all tech stacks"
+      "path": "https://docs.python.org/3/",
+      "description": "Python documentation"
     }
   },
 
   "command": {
     "check": {
-      "template": "Run full validation: python -m py_compile face-detection/face-reco.py && python -m py_compile object-detection/object_detect.py && python -m py_compile pose-estimation/pose-estimation.py && python -m py_compile object-counting/object_counter.py && python -m py_compile emotion-detection/emotion_detect.py",
+      "template": "Run full validation: python -m py_compile face-detection/face-reco.py && python -m py_compile object-detection/object_detect.py && python -m py_compile pose-estimation/pose-estimation.py && python -m py_compile object-counting/object_counter.py && python -m py_compile object-counting/sort.py && python -m py_compile emotion-detection/emotion_detect.py && python -m py_compile face-recognition/simple_face_recognition.py",
       "description": "Validate all Python files compile",
       "agent": "build",
       "subtask": false
     },
     "lint": {
-      "template": "Run ruff linter on all sub-projects: ruff check face-detection/ object-detection/ pose-estimation/ object-counting/ emotion-detection/ face-recognition/ crowd-counting/",
+      "template": "Run ruff linter on all sub-projects: ruff check face-detection/ object-detection/ pose-estimation/ object-counting/ emotion-detection/ face-recognition/ crowd-counting/ fall-detection/ gesture-recognition/ license-plate-detection/ ppe-detection/ vehicle-classification/",
       "description": "Lint all sub-projects",
       "agent": "build",
       "subtask": true
@@ -39,7 +39,7 @@
       "subtask": false
     },
     "validate-docs": {
-      "template": "Validate project implementation against offline docs at C:\\Code_Works\\Docs\\ (python/, opencv/). Cross-reference YOLO usage patterns and report discrepancies.",
+      "template": "Validate project implementation against Python/OpenCV docs. Cross-reference YOLO usage patterns and report discrepancies.",
       "description": "Validate against Python/OpenCV docs",
       "agent": "doc-validator",
       "subtask": true

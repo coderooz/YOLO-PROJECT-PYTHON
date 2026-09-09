@@ -30,7 +30,7 @@ Collection of real-time computer vision projects built with **YOLOv8** (Ultralyt
 - YOLOv8 via `ultralytics` package for inference
 - Models stored in `./models/` (git-ignored, not tracked)
 - Each sub-project is self-contained with its own README
-- Relative model paths: `../models/<model>.py`
+- Relative model paths: `../models/<model>.pt`
 - FPS displayed on-frame when applicable
 - ESC key to exit all sub-projects
 
@@ -42,8 +42,8 @@ Model files (`*.pt`, `*.onnx`, etc.) are git-ignored. Download from:
 - Place in `./models/` directory
 
 ## Doc References
-- Python docs: `C:\Code_Works\Docs\python\`
-- OpenCV: standard OpenCV Python API
+- Python docs: https://docs.python.org/3/
+- OpenCV: https://docs.opencv.org/
 - Ultralytics: https://docs.ultralytics.com/
 
 ## Project State

@@ -1,5 +1,6 @@
 import cv2
 from ultralytics import YOLO
+import time
 
 # Load the YOLO face model
 model = YOLO("../models/yolov8n-face.pt")  # path to model
@@ -10,6 +11,8 @@ cap = cv2.VideoCapture(0)
 if not cap.isOpened():
     print("Error: Could not access your webcam.")
     exit()
+
+prev_time = 0
 
 while True:
     ret, frame = cap.read()
@@ -22,8 +25,11 @@ while True:
     # Plot detections on frame
     annotated_frame = results.plot()
 
-    # Display FPS (optional)
-    fps = int(cap.get(cv2.CAP_PROP_FPS))
+    # FPS calculation (time-based)
+    curr_time = time.time()
+    fps = int(1 / (curr_time - prev_time)) if prev_time != 0 else 0
+    prev_time = curr_time
+
     cv2.putText(
         annotated_frame,
         f"FPS: {fps}",
